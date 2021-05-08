@@ -9,7 +9,7 @@
     name="obito_base">
     <inertial>
       <origin
-   xyz="0 0.0 0.12"
+   xyz="0 0.0 0"
         rpy="0 0 3.142" />
       <mass
         value="28" />
@@ -31,10 +31,11 @@
     </visual>
     <collision>
     <origin
-        xyz="0 0.0 0.12"
+        xyz="0 0.0 0"
         rpy="0 0 0" />
       <geometry>
-     <box size="0.585 0.30 0.25"/>
+     <mesh
+          filename="package://akatsuki_description/meshes/stl/only_chassis.stl" />
       </geometry>
     </collision>
   </link>
@@ -120,7 +121,7 @@
     name="front_wheel_left">
     <inertial>
       <origin
-        xyz="0 0 0"
+        xyz="0 0 0.12"
         rpy="0 0 0" />
       <mass
         value="0.7" />
@@ -132,7 +133,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://akatsuki_description/meshes/stl/wheel.stl" scale="0.1 0.1 0.1"/>
+          filename="package://akatsuki_description/meshes/stl/wheel_left.stl" />
       </geometry>
       <material
         name="">
@@ -142,11 +143,10 @@
     </visual>
     <collision>
       <origin
-         xyz="0 0.025 0"
-        rpy="0 0 0" />
+         xyz="0.05 0 0"
+        rpy="0 1.5707 0" />
       <geometry>
-          <mesh
-          filename="package://akatsuki_description/meshes/stl/wheel.stl" scale="0.1 0.1 0.1"/>
+          <cylinder length="0.1" radius="0.12"/>
       </geometry>
     </collision>
   </link>
@@ -154,7 +154,7 @@
     name="front_wheel_left_joint"
     type="continuous">
     <origin
-      xyz="0.8 -0.8 0.04"
+      xyz="0.27 -0.3 0"
       rpy="0 0 0" />
     <parent
       link="obito_base" />
@@ -181,7 +181,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://akatsuki_description/meshes/stl/wheel.stl" scale="0.1 0.1 0.1"/>
+          filename="package://akatsuki_description/meshes/stl/wheel_left.stl" />
       </geometry>
       <material
         name="">
@@ -191,11 +191,10 @@
     </visual>
     <collision>
       <origin
-         xyz="0 0.025 0"
-        rpy="0 0 0" />
+         xyz="0.05 0 0"
+        rpy="0 1.5707 0" />
       <geometry>
-         <mesh
-          filename="package://akatsuki_description/meshes/stl/wheel.stl" scale="0.1 0.1 0.1"/>
+         <cylinder length="0.1" radius="0.12"/>
       </geometry>
     </collision>
   </link>
@@ -203,7 +202,7 @@
     name="rear_wheel_left_joint"
     type="continuous">
     <origin
-      xyz="0.8 0.8 0.04"
+      xyz="0.27 0.3 0"
       rpy="0 0 0" />
     <parent
       link="obito_base" />
@@ -231,7 +230,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://akatsuki_description/meshes/stl/wheel.stl" scale="0.1 0.1 0.1"/>
+          filename="package://akatsuki_description/meshes/stl/wheel_right.stl" />
       </geometry>
       <material
         name="">
@@ -241,11 +240,10 @@
     </visual>
    <collision>
       <origin
-         xyz="0 0.025 0"
-        rpy="0 0 0" />
+         xyz="-0.05 0 0"
+        rpy="0 1.5707 0" />
       <geometry>
-          <mesh
-          filename="package://akatsuki_description/meshes/stl/wheel.stl" scale="0.1 0.1 0.1"/>
+          <cylinder length="0.1" radius="0.12"/>
       </geometry>
     </collision>
   </link>
@@ -253,7 +251,7 @@
     name="front_wheel_right_joint"
     type="continuous">
     <origin
-      xyz="-0.8 -0.8 0.04"
+      xyz="-0.27 -0.3 0"
       rpy="0 0 0" />
     <parent
       link="obito_base" />
@@ -280,7 +278,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://akatsuki_description/meshes/stl/wheel.stl" scale="0.1 0.1 0.1"/>
+          filename="package://akatsuki_description/meshes/stl/wheel_right.stl" />
       </geometry>
       <material
         name="">
@@ -290,11 +288,10 @@
     </visual>
    <collision>
       <origin
-         xyz="0 0.025 0"
-        rpy="0 0 0" />
+         xyz="-0.05 0 0"
+        rpy="0 1.5707 0" />
       <geometry>
-          <mesh
-          filename="package://akatsuki_description/meshes/stl/wheel.stl" scale="0.1 0.1 0.1"/>
+          <cylinder length="0.1" radius="0.12"/>
       </geometry>
     </collision>
   </link>
@@ -302,7 +299,7 @@
     name="rear_wheel_right_joint"
     type="continuous">
     <origin
-      xyz="-0.8 0.8 0.04"
+      xyz="-0.27 0.3 0"
       rpy="0 0 0" />
     <parent
       link="obito_base" />
@@ -321,7 +318,7 @@
 
 <joint name="bot_cam_joint" type="fixed">
     <axis xyz="0 0 0" />
-    <origin xyz="0 -1.05 0.1" rpy="0 0 0"/>
+    <origin xyz="0 -0.47 0.06" rpy="0 0 0"/>
     <parent link="obito_base"/>
     <child link="camera_link"/>
   </joint>
@@ -396,7 +393,7 @@
 
   <joint name="lidar_joint" type="fixed">
     <axis xyz="0 1 0"/>
-    <origin xyz="0 -0.9 0.5"
+    <origin xyz="0 -0.36 0.23"
       rpy="0 0 -1.571" />
 
     <parent link="obito_base"/>
