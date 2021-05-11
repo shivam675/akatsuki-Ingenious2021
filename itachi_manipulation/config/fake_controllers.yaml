@@ -7,6 +7,9 @@ controller_list:
       - wrist_1_joint
       - wrist_2_joint
       - wrist_3_joint
+  - name: fake_end_group_controller
+    joints:
+      - gripper_finger1_joint
 initial:  # Define initial robot poses.
   - group: arm_group
     pose: home_pose
