@@ -11,4 +11,19 @@ Below is their github link.
 ##[AWS RoboMaker Small House World ROS package](https://github.com/aws-robotics/aws-robomaker-small-house-world)
 
 
-# Major credits for open-source packages from AWS-robomaker and UR packages 
+# Major credits for open-source packages from AWS-robomaker, UR packages and ur_robotiq_85_gripper 
+
+
+# How to run:
+1. Terminal 1: `roslaunch obito_gazebo obito_gazebo.launch`
+2. Terminal 2: `roslaunch itachi_manipulation bringup.launch`
+
+# Tested on System config:
+- ROS: Melodic
+- OS: Ubuntu 18.04 LTS
+- Dual-core 4-thread AMD64
+- 8GB RAM
+
+# To-do:
+1. Launch file for python command - Done
+
