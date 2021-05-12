@@ -2,20 +2,20 @@
 
     <include file="$(find obito_nav)/launch/amcl.launch" />
     
-    <param name="robot_description" command="$(find xacro)/xacro.py '$(find akatsuki_description)/urdf/bot.xacro'"/>
+    <param name="robot_description" command="$(find xacro)/xacro.py '$(find akatsuki_description)/urdf/obito_arm.xacro'"/>
 
     <node name="robot_state_publisher_movebase" pkg="robot_state_publisher" type="robot_state_publisher"/>
 
 
-    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" >
+    <node name="joint_state_publisher_movebase" pkg="joint_state_publisher" type="joint_state_publisher" >
         <param name="use_gui" value="False" />
     </node>
 
     
     <arg name="map_file" default="$(find obito_nav)/maps/small_world.yaml"/>
-  <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/>
+  <node pkg="map_server" name="map_server" type="map_server" output="screen" args="$(arg map_file)"/>
 
-  <node pkg="move_base" type="move_base" respawn="false" name="move_base">
+  <node pkg="move_base" type="move_base" respawn="false" output="screen" name="move_base">
     <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" />
     
     <rosparam file="$(find obito_nav)/config/costmap_common_params.yaml" command="load" ns="global_costmap" />

@@ -2,8 +2,6 @@
 <node pkg="amcl" type="amcl" name="amcl" output="screen">
 
   <remap from="scan" to="obito/laser/scan" />
-  <remap from="cmd_vel" to="cmd_vel"/>
-  <remap from="odom" to="odom" />
 
   <!-- Publish scans from best pose at a max of 10 Hz -->
   <param name="odom_model_type" value="diff"/>

@@ -44,9 +44,12 @@
     <material>Gazebo/Black</material>
   </gazebo>
 
-    <gazebo reference="camera_link">
-    <material>Gazebo/Black</material>
+  <gazebo reference="logo_link">
+    <material>Gazebo/Orange</material>
   </gazebo>
+    <!-- <gazebo reference="camera_link">
+    <material>Gazebo/Black</material>
+  </gazebo> -->
 
 
 
@@ -58,7 +61,7 @@
   <gazebo reference="laser">
     <sensor type="ray" name="head_rplidar_sensor">
       <pose>0 0 0 0 0 0</pose>
-      <visualize>true</visualize>
+      <visualize>false</visualize>
       <update_rate>40</update_rate>
       <ray>
         <scan>
@@ -130,7 +133,7 @@
 
 
 <!-- intel realsense1 -->
-   <gazebo reference="camera_link">
+   <!-- <gazebo reference="camera_link">
     <sensor type="depth" name="intelrealsenseT">
       <always_on>1</always_on>
       <visualize>true</visualize>
@@ -173,7 +176,7 @@
         <focalLength>0.0</focalLength>
       </plugin>
     </sensor>
-  </gazebo>
+  </gazebo> -->
 
 
 <!-- imu -->
@@ -187,7 +190,7 @@
       <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
         <topicName>imu</topicName>
         <bodyName>imu_link</bodyName>
-        <updateRateHZ>10.0</updateRateHZ>
+        <updateRateHZ>40.0</updateRateHZ>
         <gaussianNoise>0.0</gaussianNoise>
         <xyzOffset>0 0 0</xyzOffset>
         <rpyOffset>0 0 0</rpyOffset>
