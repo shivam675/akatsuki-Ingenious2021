@@ -9,6 +9,8 @@
 
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
    <arg name="world_name" value="$(find obito_gazebo)/worlds/small_house.world"/>
+   <!-- <arg name="world_name" value="$(find ebot_gazebo)/worlds/lab_packaging.world"/> -->
+
     <arg name="paused" value="$(arg paused)"/>
     <arg name="use_sim_time" value="$(arg use_sim_time)"/>
     <arg name="gui" value="$(arg gui)"/>

@@ -13,6 +13,7 @@
 
     
     <arg name="map_file" default="$(find obito_nav)/maps/small_world.yaml"/>
+    <!-- <arg name="map_file" default="$(find navigation)/maps/map_one.yaml"/> -->
   <node pkg="map_server" name="map_server" type="map_server" output="screen" args="$(arg map_file)"/>
 
   <node pkg="move_base" type="move_base" respawn="false" output="screen" name="move_base">
