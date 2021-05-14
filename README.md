@@ -16,13 +16,13 @@ Below is their github link.
 
 # How to run:
 1. Terminal 1: `roslaunch obito_gazebo obito_gazebo.launch`
-2. Terminal 2: `roslaunch itachi_manipulation bringup.launch`
+2. Terminal 2: `roslaunch project_tuskinome ingenious.launch`
 
 # Tested on System config:
 - ROS: Melodic
 - OS: Ubuntu 18.04 LTS
-- Dual-core 4-thread AMD64
-- 8GB RAM
+- Dual-core 4-thread intel i3 AMD64 
+- 8GB DDR3 RAM
 
 # To-do:
 1. Launch file for python command - Done
