@@ -9,7 +9,7 @@
       <rightFrontJoint>front_wheel_right_joint</rightFrontJoint>
       <leftRearJoint>rear_wheel_left_joint</leftRearJoint>
       <rightRearJoint>rear_wheel_right_joint</rightRearJoint>
-      <wheelSeparation>0.45</wheelSeparation>
+      <wheelSeparation>0.40</wheelSeparation>
       <wheelDiameter>0.2</wheelDiameter>
       <robotBaseFrame>obito_base</robotBaseFrame>
       <torque>60</torque>

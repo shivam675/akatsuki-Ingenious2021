@@ -13,3 +13,5 @@ controller_list:
 initial:  # Define initial robot poses.
   - group: arm_group
     pose: home_pose
+  - group: end_group
+    pose: grip_close_1
